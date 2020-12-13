@@ -1,0 +1,23 @@
+{
+    "name": "yourxkc/batch-qrcode",
+    "description": "Batch Create QR Code",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "endroid/qr-code": "3.x-dev",
+        "phpoffice/phpspreadsheet": "dev-master"
+    },
+    "license": "Apache",
+    "authors": [
+        {
+            "name": "yourxkc",
+            "email": "508023077@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Bearke\\": "src"
+        }
+    }
+}
