@@ -9,10 +9,10 @@
 require '../vendor/autoload.php';
 
 // 实例化二维码批量生成类
-// $batQR = new Bearke\BatchQRCode();
+// $batQR = new Bearki\BatchQRCode();
 
 // 实例化时可传入Excel文件路径
-$batQR = new Bearke\BatchQRCode('./static/excel/test.xlsx');
+$batQR = new Bearki\BatchQRCode('./static/excel/test.xlsx');
 
 
 /**

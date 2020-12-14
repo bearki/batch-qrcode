@@ -1,5 +1,5 @@
 {
-    "name": "yourxkc/batch-qrcode",
+    "name": "bearki/batch-qrcode",
     "description": "Batch Create QR Code",
     "type": "library",
     "require": {
@@ -10,14 +10,14 @@
     "license": "Apache",
     "authors": [
         {
-            "name": "yourxkc",
+            "name": "bearki",
             "email": "508023077@qq.com"
         }
     ],
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Bearke\\": "src"
+            "Bearki\\": "src"
         }
     }
 }

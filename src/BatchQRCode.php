@@ -2,13 +2,13 @@
 /**
  * Excel批量生成QR二维码
  * @version 1.0.0 2020-12-15 02:00
- * @author Bearke <508023077@qq.com>
+ * @author Bearki <508023077@qq.com>
  * @package Bearke
  * @link https://github.com/phpoffice/phpspreadsheet
  * @link https://github.com/endroid\qrcode;
  */
 
-namespace Bearke;
+namespace Bearki;
 
 use Exception;
 use Endroid\QrCode\QrCode;
