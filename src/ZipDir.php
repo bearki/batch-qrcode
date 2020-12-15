@@ -1,4 +1,11 @@
 <?php
+/**
+ * 压缩文件夹及删除文件夹
+ * @version 1.0.2 2020-12-15
+ * @author Bearki <508023077@qq.com>
+ * @package Bearki
+ */
+
 namespace Bearki;
 
 use ZipArchive;
