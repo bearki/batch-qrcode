@@ -3,7 +3,7 @@
  * Excel批量生成QR二维码
  * @version 1.0.2 2020-12-15
  * @author Bearki <508023077@qq.com>
- * @package Bearke
+ * @package Bearki
  * @link https://github.com/phpoffice/phpspreadsheet
  * @link https://github.com/endroid\qrcode;
  */
