@@ -275,7 +275,7 @@ class BatchQRCode
             $describe = $this->describePrefix . $describe . $this->describeSuffix;
             if (!empty($describe)) {
                 // 设置二维码下方的文字
-                $qrCode->setLabel($describe, $this->fontSize, null, LabelAlignment::CENTER());
+                $qrCode->setLabel($describe, $this->fontSize, null, LabelAlignment::CENTER);
             }
 
             // 判断是否需要给二维码加LOGO
@@ -336,22 +336,29 @@ class BatchQRCode
                 }
             }
         }
+        // 限制最大结束行
+        $len = 0;
+        if ($end == 0) {
+            $end = count($data) - 1;
+        } else {
+            $end = min($end, count($data) - 1);
+        }
+        $start--;
         // 开始生成二维码
-        foreach ($data as $key => $val) {
-            if ($start == $end) {
-                return true;
-            } else {
-                $content = '';
-                foreach ($contCol as $col) {
-                    $content .= $val[$col];
-                }
-                $describe = '';
-                foreach ($descrCol as $col) {
-                    $describe .= $val[$col];
-                }
-                $this->createQRCode((string)$start, $content, $describe);
-                $end++;
+        for ($start; $start<=$end; $start++) {
+            $content = '';
+            foreach ($contCol as $col) {
+                $content .= $data[$start][$col];
             }
+            $describe = '';
+            foreach ($descrCol as $col) {
+                $describe .= $data[$start][$col];
+            }
+            $this->createQRCode((string)$start, $content, $describe);
+            $len++;
+        }
+        if ($len > 0) {
+            return true;
         }
         return false;
     }
